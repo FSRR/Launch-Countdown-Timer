@@ -2,20 +2,14 @@ body {
     margin: 0;
     font-size: 14px;
     font-family: 'Red Hat Text', sans-serif;
-}
-
-.container {
-    position: relative;
     background-color: hsl(235, 16%, 14%);
 }
 
-.container::after {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
+.container {
+    display: grid;
+    grid-template-rows: auto 2fr 1fr;
+    position: relative;
+    height: 100vh;
     background-image: url(/images/bg-stars.svg);
     background-size: 100%;
 }
@@ -25,15 +19,16 @@ body {
     justify-content: center;
     color: #fff;
     padding-top: 120px;
-    margin-bottom: 100px;
 }
 
 .header h1 {
-    letter-spacing: 10px;
+    letter-spacing: 8px;
     text-transform: uppercase;
     font-size: 20px;
     font-weight: 700;
 }
+
+.main-container {align-self: center;}
 
 .main {
     display: flex;
@@ -42,6 +37,12 @@ body {
     width: 60%;
     margin-left: auto;
     margin-right: auto;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .card-number {
@@ -55,39 +56,58 @@ body {
     width: 140px;
     height: 130px;
     color: hsl(345, 95%, 68%);
-    z-index: 100;
 }
 
 .card-number::before, .card-number::after {
     content: "";
     position: absolute;
     width: 100%;
-    height: 50%;
-    border-radius: 10px;
+    height: 49%;
     z-index: -1;
 }
 
 .card-number::before {
     top: 0;
     left: 0;
-    background-color: hsl(235, 21%, 22%);
-    border-bottom: 1px solid #000;
-    border-bottom-left-radius: 15px;
-    border-bottom-right-radius: 15px;
-    box-shadow: 0px 0px 1px 1px hsl(235, 16%, 14%);
+    background-color: hsla(236, 21%, 26%, 0.685);
+    border-radius: 10px 10px 15px 15px;
 }
 
 .card-number::after {
     bottom: 0;
     left: 0;
     background-color: hsl(236, 21%, 26%);
-    border-top: 1px solid #000;
-    border-top-left-radius: 15px;
-    border-top-right-radius: 15px;
+    border-radius: 15px 15px 10px 10px;
+    border-top: 1px solid hsl(236, 21%, 26%);
+    box-shadow: 1px 9px 1px 0px hsl(234, 17%, 12%);
+}
+
+.card h2 {
+    color: hsl(237, 18%, 59%);
+    text-transform: uppercase;
+    font-size: 14px;
+    line-height: 3;
+    letter-spacing: 6px;
 }
 
 .footer {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
     background-image: url(/images/pattern-hills.svg);
     background-repeat: no-repeat;
-    background-size: 100%;
+    background-size: 100% 100%;
+    background-position: bottom;
+}
+
+.content-footer {
+    display: flex;
+    gap: 40px;
+    margin-bottom: 80px;
+}
+
+.footer-icons:hover {
+    /* color: hsl(345, 95%, 68%); */
+    filter: hue-rotate(68deg) brightness(95%);
+    cursor: pointer;
 }
