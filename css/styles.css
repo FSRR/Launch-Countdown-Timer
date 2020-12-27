@@ -45,11 +45,14 @@ body {
     align-items: center;
 }
 
-.card-number-box {
+.card-number {
     position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
+    font-size: 70px;
+    font-weight: 700;
+    color: hsl(345, 95%, 68%);
     width: 140px;
     height: 130px;
     background-color: hsla(236, 21%, 26%, 0.685);
@@ -57,60 +60,27 @@ body {
     border-radius: 9px;
 }
 
-.card-number {
-    position: absolute;
-    font-size: 70px;
-    font-weight: 700;
-    color: hsl(345, 95%, 68%);
-    margin: 0;
-}
-
-.card-number-box::before, .card-number-box::after {
+.card-number::before, .card-number::after {
     content: "";
     position: absolute;
-    width: 12px;
-    height: 12px;
+    width: 15px;
+    height: 15px;
     background-color: hsl(235, 16%, 14%);
     border-radius: 50%;
-    top: 50%;
-}
-
-.card-number-box::before {
-    right: 96%;
-}
-
-.card-number-box::after {
-    left: 96%;
-}
-
-/* .card-number::before, .card-number::after {
-    content: "";
-    position: absolute;
-    width: 100%;
-    height: 49%;
-    z-index: -1;
+    top: calc(50% - 7.5px);
 }
 
 .card-number::before {
-    top: 0;
-    left: 0;
-    background-color: hsla(236, 21%, 26%, 0.685);
-    border-radius: 10px 10px 15px 15px;
-    transition: transform 0.5s;
-} */
-
-.card-number-box:hover {
-    transform: rotateX(180deg);
+    right: calc(100% - 7.5px);
 }
 
-/* .card-number::after {
-    bottom: 0;
-    left: 0;
-    background-color: hsl(236, 21%, 26%);
-    border-radius: 15px 15px 10px 10px;
-    border-top: 1px solid hsl(236, 21%, 26%);
-    box-shadow: 1px 9px 1px 0px hsl(234, 17%, 12%);
-} */
+.card-number::after {
+    left: calc(100% - 7.5px);
+}
+
+.card-number:hover {
+    transform: rotateX(180deg);
+}
 
 .card h2 {
     color: hsl(237, 18%, 59%);
