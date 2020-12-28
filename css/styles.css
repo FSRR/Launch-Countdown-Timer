@@ -55,9 +55,10 @@ body {
     color: hsl(345, 95%, 68%);
     width: 140px;
     height: 130px;
-    background-color: hsla(236, 21%, 26%, 0.685);
+    background-image: linear-gradient(hsl(236, 21%, 23%) 50%, hsl(236, 21%, 26%) 50%);
     transition: transform 0.5s;
     border-radius: 9px;
+    box-shadow: 0 15px 0px 0px hsl(234, 17%, 12%);
 }
 
 .card-number::before, .card-number::after {
