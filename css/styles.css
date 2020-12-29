@@ -40,6 +40,7 @@ body {
 }
 
 .card {
+    position: relative;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -56,9 +57,9 @@ body {
     width: 140px;
     height: 130px;
     background-image: linear-gradient(hsl(236, 21%, 23%) 50%, hsl(236, 21%, 26%) 50%);
-    transition: transform 0.5s;
     border-radius: 9px;
     box-shadow: 0 15px 0px 0px hsl(234, 17%, 12%);
+    transition: transform 0.5s;
 }
 
 .card-number::before, .card-number::after {
@@ -79,8 +80,8 @@ body {
     left: calc(100% - 7.5px);
 }
 
-.card-number:hover {
-    transform: rotateX(180deg);
+.flip-card {
+    transform: rotateX(360deg);
 }
 
 .card h2 {
