@@ -2,7 +2,7 @@ const cards = document.querySelectorAll('.number')
 const frontCard = Array.from(document.querySelectorAll('.front-number'))
 const backCard = Array.from(document.querySelectorAll('.back-number'))
 
-const dateEnd = new Date('01/01/2021 12:00 AM')
+const dateEnd = new Date('01/31/2021 12:00 AM')
 const date = dateEnd.toDateString().split(' ')
 document.getElementById('date-end').textContent = `${date[0]}, ${date[2]} ${date[1]} ${date[3]}`
 
