@@ -1,6 +1,5 @@
 body {
     margin: 0;
-    /* font-size: 14px; */
     font-family: 'Red Hat Text', sans-serif;
     background-color: hsl(235, 16%, 14%);
 }
@@ -129,7 +128,6 @@ body {
 }
 
 .footer {
-    height: 20vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -137,11 +135,30 @@ body {
     background-repeat: no-repeat;
     background-size: 100% 100%;
     background-position: bottom;
+    height: 20vh;
 }
 
 .content-footer {
     display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.dev-footer {
+    font-size: .7rem;
+    color: #fff;
+}
+
+.dev-footer a {
+    text-decoration: none;
+    color: hsl(237, 18%, 59%);
+}
+
+.icons-footer {
+    display: flex;
     gap: 2.5em;
+    margin-top: 3em;
 }
 
 .footer-icons:hover {
@@ -171,6 +188,14 @@ body {
     .date-container {
         font-size: .7em;
     }
+
+    .footer {
+        align-items: end;
+    }
+    
+    img {
+        width: 20px;
+    }
 }
 
 @media screen and (max-width: 25em) {
@@ -179,10 +204,14 @@ body {
     }
 
     .main {
-        font-size: 2em;
+        font-size: 2.5em;
     }
 
     .date-container {
         font-size: .6em;
     }
+    
+    /* .content-footer {
+        gap: 20px;
+    } */
 }
